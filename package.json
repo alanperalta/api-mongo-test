@@ -1,0 +1,39 @@
+{
+  "name": "meli.callbacks",
+  "version": "1.0.0",
+  "description": "API para enviar y recibir notificaciones de la API MELI",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon --exec babel-node ./src/index.js",
+    "build-server": "babel src -d dist",
+    "build": "npm run clean && npm run build-server",
+    "start": "npm run build && nodemon dist/index.js",
+    "serve": "NODE_ENV=production node dist/index.js",
+    "clean": "rm -rf dist && mkdir dist",
+    "test-server": "nodemon dist/index.js"
+  },
+  "author": "TGroup - Alan",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.12.1",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "helmet": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.2",
+    "morgan": "^1.10.0",
+    "rand-token": "^1.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.1",
+    "@babel/node": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1"
+  }
+}
